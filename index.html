@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <title>Список файлов</title>
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+  <div class="drop-zone" id="dropZone">
+    Перетащите файлы сюда или нажмите для выбора файлов:
+    <input type="file" id="fileInput" multiple>
+  </div>
+  
+  <div class="filters">
+    Фильтры:
+    <input type="number" id="sizeInput" placeholder="Макс. размер (в КБ)">
+    <select id="typeInput">
+      <option value="">Все типы</option>
+      <option value="image/png">Изображения</option>
+      <option value="application/pdf">PDF</option>
+      <option value="text/plain">Текст</option>
+    </select>
+    <button onclick="applyFilters()">Применить</button>
+  </div>
+
+  <div class="file-table" id="fileTable"></div>
+
+  <script src="script.js"></script>
+</body>
+</html>
